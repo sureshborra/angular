@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Blog
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
@@ -25,3 +26,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# angular
+>>>>>>> 778c9f04598fba8b43af92d1a101fa05e07e91a6
