@@ -1,0 +1,147 @@
+
+
+  
+ 
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Rigister</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          
+<div class="container"> 
+    <div class="card">
+        <div class="card-body">
+          <form [formGroup]="angForm" enctype="multipart/form-data">
+            <div class="form-group">
+              <label class="col-md-4">Name</label>
+              <input type="text" class="form-control" formControlName="name" #name />
+            </div>
+            <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
+              <div *ngIf="angForm.controls['name'].errors.required">
+                Name is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-4">Phno </label>
+              <input type="text" class="form-control" formControlName="phno" #phno />
+            </div>
+            <div *ngIf="angForm.controls['phno'].invalid && (angForm.controls['phno'].dirty || angForm.controls['phno'].touched)" class="alert alert-danger">
+              <div *ngIf="angForm.controls['phno'].errors.required">
+                Phno is required.
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="col-md-4">Email </label>
+              <input type="text" class="form-control" formControlName="email" #email />
+            </div>
+            <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)" class="alert alert-danger">
+              <div *ngIf="angForm.controls['email'].errors.required">
+                Email is required.
+              </div>
+            </div>
+
+             <div class="form-group">
+                <label for="exampleFormControlSelect1">State</label>
+                <select class="form-control"  >
+                  <option value="TS">TS</option>
+                  <option value="AP">AP</option> 
+                  </select>
+              </div>
+
+              <div class="form-group">
+                  <label class="col-md-4">Skills </label>
+              <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="skills_ids[]" value="1">Skill 1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="skills_ids[]" value="2">Skill 2
+                  </label>
+                </div>
+                <div class="form-check disabled">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="skills_ids[]" value="3" >Skill 3
+                  </label>
+                </div> 
+              </div>
+ 
+             
+
+              <div class="form-group">
+                  <label for="exampleFormControlSelect1">Industry</label>
+                  <select class="form-control"  name="industry_id"  >
+                      <option  >Select Industry</option>
+                    <option value="Web Developer">Web Developer</option>
+                    <option value="Web Designer">Web Designer</option> 
+                    <option value="Degital Marketing">Degital Marketing</option> 
+                    </select>
+                </div>
+   
+                <div class="form-group">
+                    <label class="col-md-4">Address </label>
+                 <textarea class="form-control" rows="3"  formControlName="address" #address ></textarea>
+                  </div>
+                  <div *ngIf="angForm.controls['address'].invalid && (angForm.controls['address'].dirty || angForm.controls['address'].touched)" class="alert alert-danger">
+                    <div *ngIf="angForm.controls['address'].errors.required">
+                      Address is required.
+                    </div>
+                  </div>
+
+ 
+              <div class="form-group">
+                  <label class="col-md-4">Gender</label>
+                <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="gender">Male
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="gender">FeMale
+                    </label>
+                  </div> 
+              </div>
+
+
+               <div class="form-group">
+                  <label class="col-md-4">Profile Image </label>
+                  <input type="file" class="form-control" formControlName="profile_image" #profile_image />
+                </div>
+                <div *ngIf="angForm.controls['profile_image'].invalid && (angForm.controls['profile_image'].dirty || angForm.controls['profile_image'].touched)" class="alert alert-danger">
+                  <div *ngIf="angForm.controls['profile_image'].errors.required">
+                    Prifle Image is required.
+                  </div>
+                </div>
+ 
+ 
+
+            <div class="form-group">
+              <button type="submit" 
+              [disabled]="angForm.pristine || angForm.invalid" 
+              class="btn btn-primary">Submit</button>
+            </div>
+
+            
+
+
+          </form>
+        </div>
+      </div>
+  </div> 
+        </div>
+  
+     
+      </div>
+    </div>
+  </div>
